@@ -14,9 +14,26 @@
 
 /* Narrow */
 
-	@media screen and (min-width: 961px) and (max-width: 1320px) {
-
-		
+	@media screen and (min-width: 961px)  {
+        .sidebar {
+            position: fixed;
+            left: 0;
+            width: 350px;
+            height: 100%;
+            background: none;
+            transition: all .5s ease;
+            overflow-y: auto;
+        } 
+        section{
+            margin-left: 350px;
+        }
+        #btn {
+            display: none;
+        }
+        #cancel{
+            display: none;
+        }
+	
 
 	}
 
