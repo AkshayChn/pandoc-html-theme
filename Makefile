@@ -62,6 +62,6 @@ $(BUILD)/$(OUTPUT_FILENAME).html:	$(MAKEFILE) $(METADATA) $(CHAPTERS) $(ASSETS)
 	mkdir -p $(BUILD)
 	$(PANDOC_COMMAND) $(ARGS) $(HTML_ARGS) -o $@ $(CHAPTERS)
 	cp -R $(IMAGES_FOLDER)/ $(BUILD)/
-	cp -R $(ASSETS)assets $(BUILD)/
+	cp -R $(ASSETS) $(BUILD)/
 	@echo "${GREEN}HTML site was built${NC}"
 

@@ -1,0 +1,1 @@
+/* make a func to auto hide the sidebar on click on any element only for mobile */

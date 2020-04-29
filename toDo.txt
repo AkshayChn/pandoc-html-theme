@@ -1,0 +1,4 @@
+Problems:
+1 - The page layout getting reset when hrefd
+2 - Adding dynamic dark mode
+3 - 
