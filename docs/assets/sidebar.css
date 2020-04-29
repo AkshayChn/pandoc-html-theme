@@ -62,6 +62,7 @@ label #btn,label #cancel{
   background: #eeeeeeaa;
   border-radius: 3px;
   cursor: pointer;
+  z-index: 1001;
 }
 label #btn{
   left: 25px;
