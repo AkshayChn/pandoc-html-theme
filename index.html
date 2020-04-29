@@ -2,18 +2,124 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Sider Menu Bar CSS</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="screensize.css">
   </head>
   <body>
+  
     <input type="checkbox" id="check">
     <label for="check">
-      <i id="btn">TOC</i>
-      <i id="cancel">X</i>
+      <span id="btn">▶</span>
+      <span id="cancel">✖</span>
     </label>
+    
     <div class="sidebar">
-    <header>My App</header>
+    <header>"Lorem ipsum d amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</header>
+  <div id="sidebarTOC">
   <ul>
+  <ul>
+<li><a href="#overview">Overview</a>
+<ul>
+<li><a href="#references">References</a></li>
+<li><a href="#overview-of-effort">Overview of Effort</a></li>
+</ul></li>
+<li><a href="#introduction">1. Introduction</a>
+<ul>
+<li><a href="#readings">Readings</a></li>
+<li><a href="#problems">Problems</a></li>
+</ul></li>
+<li><a href="#synopsis">Synopsis</a></li>
+<li><a href="#description">Description</a>
+<ul>
+<li><a href="#using-pandoc">Using pandoc</a></li>
+<li><a href="#specifying-formats">Specifying formats</a></li>
+<li><a href="#character-encoding">Character encoding</a></li>
+<li><a href="#creating-a-pdf">Creating a PDF</a></li>
+<li><a href="#reading-from-the-web">Reading from the Web</a></li>
+</ul></li>
+<li><a href="#options">Options</a>
+<ul>
+<li><a href="#general-options">General options</a></li>
+<li><a href="#reader-options">Reader options</a></li>
+<li><a href="#general-writer-options">General writer options</a></li>
+<li><a href="#options-affecting-specific-writers">Options affecting specific writers</a></li>
+<li><a href="#citation-rendering">Citation rendering</a></li>
+<li><a href="#math-rendering-in-html">Math rendering in HTML</a></li>
+<li><a href="#options-for-wrapper-scripts">Options for wrapper scripts</a></li>
+</ul></li>
+<li><a href="#exit-codes">Exit codes</a></li>
+<li><a href="#default-files">Default files</a></li>
+<li><a href="#templates">Templates</a>
+<ul>
+<li><a href="#template-syntax">Template syntax</a></li>
+<li><a href="#variables">Variables</a></li>
+</ul></li>
+<li><a href="#extensions">Extensions</a>
+<ul>
+<li><a href="#typography">Typography</a></li>
+<li><a href="#headings-and-sections">Headings and sections</a></li>
+<li><a href="#math-input">Math Input</a></li>
+<li><a href="#raw-htmltex">Raw HTML/TeX</a></li>
+<li><a href="#literate-haskell-support">Literate Haskell support</a></li>
+<li><a href="#other-extensions">Other extensions</a></li>
+</ul></li>
+<li><a href="#pandocs-markdown">Pandoc’s Markdown</a>
+<ul>
+<li><a href="#philosophy">Philosophy</a></li>
+<li><a href="#paragraphs">Paragraphs</a></li>
+<li><a href="#headings">Headings</a></li>
+<li><a href="#block-quotations">Block quotations</a></li>
+<li><a href="#verbatim-code-blocks">Verbatim (code) blocks</a></li>
+<li><a href="#line-blocks">Line blocks</a></li>
+<li><a href="#lists">Lists</a></li>
+<li><a href="#horizontal-rules">Horizontal rules</a></li>
+<li><a href="#tables">Tables</a></li>
+<li><a href="#metadata-blocks">Metadata blocks</a></li>
+<li><a href="#backslash-escapes">Backslash escapes</a></li>
+<li><a href="#inline-formatting">Inline formatting</a></li>
+<li><a href="#math">Math</a></li>
+<li><a href="#raw-html">Raw HTML</a></li>
+<li><a href="#latex-macros">LaTeX macros</a></li>
+<li><a href="#links-1">Links</a></li>
+<li><a href="#images">Images</a></li>
+<li><a href="#divs-and-spans">Divs and Spans</a></li>
+<li><a href="#footnotes">Footnotes</a></li>
+<li><a href="#citations">Citations</a></li>
+<li><a href="#non-pandoc-extensions">Non-pandoc extensions</a></li>
+<li><a href="#markdown-variants">Markdown variants</a></li>
+</ul></li>
+<li><a href="#producing-slide-shows-with-pandoc">Producing slide shows with pandoc</a>
+<ul>
+<li><a href="#structuring-the-slide-show">Structuring the slide show</a></li>
+<li><a href="#incremental-lists">Incremental lists</a></li>
+<li><a href="#inserting-pauses">Inserting pauses</a></li>
+<li><a href="#styling-the-slides">Styling the slides</a></li>
+<li><a href="#speaker-notes">Speaker notes</a></li>
+<li><a href="#columns">Columns</a></li>
+<li><a href="#frame-attributes-in-beamer">Frame attributes in beamer</a></li>
+<li><a href="#background-in-reveal.js-and-beamer">Background in reveal.js and beamer</a></li>
+</ul></li>
+<li><a href="#creating-epubs-with-pandoc">Creating EPUBs with pandoc</a>
+<ul>
+<li><a href="#epub-metadata">EPUB Metadata</a></li>
+<li><a href="#the-epubtype-attribute">The <code>epub:type</code> attribute</a></li>
+<li><a href="#linked-media">Linked media</a></li>
+</ul></li>
+<li><a href="#creating-jupyter-notebooks-with-pandoc">Creating Jupyter notebooks with pandoc</a></li>
+<li><a href="#syntax-highlighting">Syntax highlighting</a></li>
+<li><a href="#custom-styles">Custom Styles</a>
+<ul>
+<li><a href="#output">Output</a></li>
+<li><a href="#input">Input</a></li>
+</ul></li>
+<li><a href="#custom-writers">Custom writers</a></li>
+<li><a href="#a-note-on-security">A note on security</a></li>
+<li><a href="#authors">Authors</a></li>
+</ul>
     <li><a href="#"><i class="fas fa-qrcode"></i>Dashboard</a></li>
     <li><a href="#"><i class="fas fa-link"></i>Shortcuts</a></li>
     <li><a href="#"><i class="fas fa-stream"></i>Overview</a></li>
@@ -22,8 +128,28 @@
     <li><a href="#"><i class="fas fa-sliders-h"></i>Services</a></li>
     <li><a href="#"><i class="far fa-envelope"></i>Contact</a></li>
   </ul>
+  </div>
 </div>
- <section></section>
+ <section>
+ <h1>HELO</h1>
+ 
+The standard Lorem Ipsum passage, used since the 1500s
+
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
+
+"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+1914 translation by H. Rackham
+
+"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"
+Section 1.10.33 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
+
+"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
+1914 translation by H. Rackham
+
+"On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."
+
+ </section>
 
   </body>
 </html>

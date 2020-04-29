@@ -1,0 +1,41 @@
+/* Wide */
+
+	@media screen and (min-width: 961px) and (max-width: 1880px) {
+
+		
+	}
+
+/* Normal */
+
+	@media screen and (min-width: 961px) and (max-width: 1620px) {
+
+
+	}
+
+/* Narrow */
+
+	@media screen and (min-width: 961px) and (max-width: 1320px) {
+
+		
+
+	}
+
+
+
+	@media screen and (min-width: 736px) and (max-width: 960px) {
+        body {
+            background-color: black;
+            color: white;
+        }
+		
+	}
+
+/* Mobile */
+
+	@media screen and (max-width: 736px) {
+        body {
+            background-color: red;
+            color: red;
+        }
+		
+	}
