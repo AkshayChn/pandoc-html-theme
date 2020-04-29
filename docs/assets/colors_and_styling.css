@@ -1,45 +1,11 @@
 /*
-    MY CSS
+    Inner Body Element Styles
 */
-
-#mainContent {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 20px;
-    max-width: 700px;
-}
-
-#titleCard {
-    text-align: left;
-    /*margin-top: -4em;*/
-    
-}
-
-#titleCard h1 {
-    line-height: 1;
-    /*color: #777;*/
-    
-}
-
-#pandocBody {
-    margin: 1%;
-    padding: 5%;
-    overflow: auto;
-}
-
-#pandocToc {
-    margin: 2%;
-}
-
-#pandocToc ul {
-    list-style: none;
-    margin-bottom: 4%;
-}
 
 pre {
   padding: 10px;
   background: #f0f0f0;
-  font-family: Consolas, monospace, serif;
+  font-family: monospace, serif;
   color: #222222;
   -moz-tab-size: 4;
   tab-size: 4;
@@ -52,7 +18,7 @@ pre {
 :not(pre) > kbd,
 :not(pre) > samp {
   /*font-size: 14px;*/
-  font-family: Consolas, monospace, serif;
+  font-family: monospace, serif;
   color: #8c4a03;
   white-space: normal;
   padding: 0 4px;
@@ -84,24 +50,7 @@ h4 {
     font-size: 1em;
     margin-top: 0.5em;
 }
-/*
-#header a {
-    color: #fff;
-}
 
-#header code {
-    color: inherit;
-    border: none;
-    background: none;
-    
-}
-
-#header h1, h2, h3 {
-    line-height: 1em;
-    margin-bottom: 0.53em;
-    
-}
-*/
 
 /* CUSTOM DIVS */
 .note {
@@ -131,6 +80,4 @@ h4 {
   border-left: 0.4rem solid #688E26;
   /*border-radius: 3px;*/
 }
-/*
-    MY CSS ENDS HERE
-*/
+
