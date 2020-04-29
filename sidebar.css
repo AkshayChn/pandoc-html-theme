@@ -90,14 +90,27 @@ label #cancel{
 #check:checked ~ label #cancel{
   left: 285px;
 }
-#check:checked ~ section{
+#check:checked ~ main{
   margin-left: 350px;
 }
+/*
+#check:checked ~ section{
+  margin-left: 350px;
+}*/
 
+main{
+    background: url(bg.jpeg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  transition: all .5s;
+  overflow: auto;
+}
+/*
 section{
   background: url(bg.jpeg) no-repeat;
   background-position: center;
   background-size: cover;
   height: 100vh;
   transition: all .5s;
-}
+}*/

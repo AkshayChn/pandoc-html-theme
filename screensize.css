@@ -24,7 +24,10 @@
             transition: all .5s ease;
             overflow-y: auto;
         } 
-        section{
+        /*section{
+            margin-left: 350px;
+        }*/
+        main{
             margin-left: 350px;
         }
         #btn {
