@@ -17,6 +17,7 @@ body {
   background: inherit;
   transition: all .5s ease;
   overflow-y: auto;
+  z-index: 1000;
 }
 .sidebar header {
     margin: 20px;
@@ -101,7 +102,7 @@ label #cancel{
 
 main{
   /*height: 100vh;*/
-  transition: all .5s;
+  /*transition: all .5s;*/
   overflow: auto;
 }
 /*
