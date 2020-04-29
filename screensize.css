@@ -40,19 +40,13 @@
 
 
 	@media screen and (min-width: 736px) and (max-width: 960px) {
-        body {
-            background-color: black;
-            color: white;
-        }
+        
 		
 	}
 
 /* Mobile */
 
 	@media screen and (max-width: 736px) {
-        body {
-            background-color: red;
-            color: red;
-        }
+        
 		
 	}
