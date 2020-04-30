@@ -2,10 +2,14 @@
     --color-bg: white;
     --color-text: rgb(33, 37, 41);
     --sidebar-border: 1px solid #eaecef;
+    --sidebar-background: inherit;
+    --color-check-button: #aaa;
 }
 
 .theme-dark-1 {
     --color-bg: #121212;
     --color-text: #ddd;
     --sidebar-border: none;
+    --sidebar-background: #222;
+    --color-check-button: #333;
 }

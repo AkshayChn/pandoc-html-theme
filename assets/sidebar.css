@@ -19,7 +19,7 @@ body {
   left: -350px;
   width: 350px;
   height: 100%;
-  background: inherit;
+  background: var(--sidebar-background, inherit);
   transition: all 0.2s ease;
   overflow-y: auto;
   z-index: 1000;
@@ -61,12 +61,13 @@ label #btn,label #cancel{
   border-radius: 3px;
   cursor: pointer;
   z-index: 1001;
+  color: var(--color-check-button, #aaa)
 }
 label #btn{
   left: 25px;
   top: 25px;
   font-size: 20px;
-  color: #aaa;
+  /*color: #aaa;*/
   padding: 6px 12px;
   transition: all .3s;
 }
@@ -75,7 +76,7 @@ label #cancel{
   left: -285px;
   top: 25px;
   font-size: 20px;
-  color: #aaa;
+  /*color: #aaa;*/
   padding: 6px 12px;
   transition: all .3s ease;
 }
