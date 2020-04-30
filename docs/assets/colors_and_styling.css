@@ -5,7 +5,7 @@
 pre {
   padding: 10px;
   background: #f0f0f0;
-  font-family: monospace, serif;
+  font-family: 'IBM Plex Mono', monospace;
   color: #222222;
   -moz-tab-size: 4;
   tab-size: 4;
@@ -14,11 +14,15 @@ pre {
   border-radius: 3px;
   white-space: pre-wrap;
 }
+pre > code{
+  font-family: 'IBM Plex Mono', monospace;
+}
+
 :not(pre) > code,
 :not(pre) > kbd,
 :not(pre) > samp {
   /*font-size: 14px;*/
-  font-family: monospace, serif;
+  font-family: 'IBM Plex Mono', monospace;
   color: #8c4a03;
   white-space: normal;
   padding: 0 4px;
@@ -29,28 +33,51 @@ pre {
 
 /*HEADINGS*/
 h1 {
-    font-size: 3em;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+    font-size: 2.64em;
+    margin-bottom: 18px;
+    margin-top: 1em;
 }
 
 h2 {
-    font-size: 2em;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+    font-size: 1.62em;
+    margin-bottom: 18px;
 }
 
 h3 {
-    font-size: 1.5em;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+    font-size: 1.2em;
+    margin-bottom: 18px;
+    font-weight: normal;
 }
 
 h4 {
     font-size: 1em;
-    margin-top: 0.5em;
+    margin-bottom: 18px;
+    font-weight: normal;
 }
 
+p, ul, ol, table, pre {
+    margin-bottom: 1em;
+}
+
+ul {
+    list-style: disc;
+    margin-left: 1em;
+    /*padding-left: 1em;*/
+}
+
+ul li {
+    padding-left: 0em;
+    
+}
+
+ol {
+    list-style: decimal;
+    margin-left: 1em;
+}
+
+ol li {
+    padding-left: 0em;
+}
 
 /* CUSTOM DIVS */
 .note {
@@ -75,9 +102,9 @@ h4 {
   margin-bottom: 10px;
   padding: .05rem 1.25rem;
   /*background: #f2fae3;*/
-  color: #688E26;
+  color: #42b983;
   overflow: auto;
-  border-left: 0.4rem solid #688E26;
+  border-left: 0.4rem solid #42b983;
   /*border-radius: 3px;*/
 }
 

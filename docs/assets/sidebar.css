@@ -1,12 +1,16 @@
 /*@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');*/
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 *{
   padding: 0;
   margin: 0;
-  list-style: none;
+  /*list-style: none;*/
   text-decoration: none;
 }
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
   background-color: white;
 }
 .sidebar {
@@ -18,15 +22,20 @@ body {
   transition: all .5s ease;
   overflow-y: auto;
   z-index: 1000;
+  line-height: 1;
 }
 .sidebar header {
     margin: 20px;
+}
+.sidebar ul {
+  list-style: none;
 }
 .sidebar ul a{
   color: black;
   /*padding-left: 40px;*/
   box-sizing: border-box;
   transition: .4s;
+  list-style: none;
 }
 
 
@@ -34,25 +43,7 @@ body {
     margin: 20px;
 }
 
-ul {
-    list-style: disc;
-    /*padding-left: 1em;*/
-    margin-bottom: 0.5em;
-}
 
-ul li {
-    padding-left: 1em;
-    
-}
-
-ol {
-    list-style: decimal;
-    padding-left: 1.25em;
-}
-
-ol li {
-    padding-left: 0.25em;
-}
 
 #check{
   display: none;
