@@ -11,7 +11,8 @@ body {
   font-family: 'IBM Plex Sans', sans-serif;
   font-size: 18px;
   line-height: 1.5;
-  background-color: white;
+  background-color: var(--color-bg, white);
+  color: var(--color-text, black);
 }
 .sidebar {
   position: fixed;
@@ -19,10 +20,10 @@ body {
   width: 350px;
   height: 100%;
   background: inherit;
-  transition: all .5s ease;
+  transition: all 0.2s ease;
   overflow-y: auto;
   z-index: 1000;
-  border-right: 1px solid #eaecef;
+  border-right: 1px solid var(--color-sidebar-border, #eaecef);
   /*line-height: 1;*/
 }
 .sidebar header {
@@ -37,7 +38,7 @@ body {
   list-style: none;
 }
 .sidebar ul a{
-  color: black;
+  color: inherit;
   /*padding-left: 40px;*/
   box-sizing: border-box;
   transition: .4s;
@@ -67,7 +68,7 @@ label #btn{
   font-size: 20px;
   color: #aaa;
   padding: 6px 12px;
-  transition: all .5s;
+  transition: all .3s;
 }
 label #cancel{
   z-index: 1111;
@@ -76,7 +77,7 @@ label #cancel{
   font-size: 20px;
   color: #aaa;
   padding: 6px 12px;
-  transition: all .5s ease;
+  transition: all .3s ease;
 }
 
 #check:checked ~ .sidebar{
