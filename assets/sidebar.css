@@ -22,10 +22,11 @@ body {
   transition: all .5s ease;
   overflow-y: auto;
   z-index: 1000;
+  border-right: 1px solid #eaecef;
   /*line-height: 1;*/
 }
 .sidebar header {
-    margin: 30px;
+    margin: 37px;
     line-height: 1;
 }
 .sidebar header h3 {
