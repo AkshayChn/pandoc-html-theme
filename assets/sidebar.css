@@ -23,7 +23,7 @@ body {
   transition: all 0.2s ease;
   overflow-y: auto;
   z-index: 1000;
-  border-right: 1px solid var(--color-sidebar-border, #eaecef);
+  border-right:  var(--sidebar-border, 1px solid #eaecef);
   /*line-height: 1;*/
 }
 .sidebar header {

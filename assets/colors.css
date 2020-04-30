@@ -1,11 +1,11 @@
 .theme-light-1 {
     --color-bg: white;
     --color-text: rgb(33, 37, 41);
-    --color-sidebar-border: #eaecef
+    --sidebar-border: 1px solid #eaecef;
 }
 
 .theme-dark-1 {
     --color-bg: #121212;
     --color-text: #ddd;
-    --color-sidebar-border: #333;
+    --sidebar-border: none;
 }
