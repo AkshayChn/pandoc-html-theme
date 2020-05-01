@@ -124,7 +124,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="#references">References</a></li>
 <li><a href="#overview-of-effort">Overview of Effort</a></li>
 </ul></li>
-<li><a href="#various-codes">Various Codes</a>
+<li><a href="#syntax-highlighting-for-various-languages">Syntax Highlighting for Various Languages</a>
 <ul>
 <li><a href="#code-examples">Code examples</a></li>
 </ul></li>
@@ -280,7 +280,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li><strong>Introduction to NP-Completeness</strong> (4 problems)</li>
 </ol>
-<h1 id="various-codes">Various Codes</h1>
+<h1 id="syntax-highlighting-for-various-languages">Syntax Highlighting for Various Languages</h1>
 <div class="note">
 <p>This is a note</p>
 </div>
@@ -292,11 +292,135 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>This is bad!</p>
 </div>
 <h2 id="code-examples">Code examples</h2>
-<p>C</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1"></a><span class="dt">int</span> i = <span class="dv">2</span>;</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="dt">int</span> main(<span class="dt">void</span>){</span>
-<span id="cb1-3"><a href="#cb1-3"></a>    </span>
-<span id="cb1-4"><a href="#cb1-4"></a>}</span></code></pre></div>
+<h3 id="c">C</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1"></a><span class="pp">#include </span><span class="im">&lt;math.h&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="dt">int</span> checkPrimeNumber(<span class="dt">int</span> n);</span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="dt">int</span> checkArmstrongNumber(<span class="dt">int</span> n);</span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="dt">int</span> main() {</span>
+<span id="cb1-6"><a href="#cb1-6"></a>    <span class="dt">int</span> n, flag;</span>
+<span id="cb1-7"><a href="#cb1-7"></a>    printf(<span class="st">&quot;Enter a positive integer: &quot;</span>);</span>
+<span id="cb1-8"><a href="#cb1-8"></a>    scanf(<span class="st">&quot;%d&quot;</span>, &amp;n);</span>
+<span id="cb1-9"><a href="#cb1-9"></a></span>
+<span id="cb1-10"><a href="#cb1-10"></a>    <span class="co">// check prime number</span></span>
+<span id="cb1-11"><a href="#cb1-11"></a>    flag = checkPrimeNumber(n);</span>
+<span id="cb1-12"><a href="#cb1-12"></a>    <span class="cf">if</span> (flag == <span class="dv">1</span>)</span>
+<span id="cb1-13"><a href="#cb1-13"></a>        printf(<span class="st">&quot;%d is a prime number.</span><span class="sc">\n</span><span class="st">&quot;</span>, n);</span>
+<span id="cb1-14"><a href="#cb1-14"></a>    <span class="cf">else</span></span>
+<span id="cb1-15"><a href="#cb1-15"></a>        printf(<span class="st">&quot;%d is not a prime number.</span><span class="sc">\n</span><span class="st">&quot;</span>, n);</span>
+<span id="cb1-16"><a href="#cb1-16"></a></span>
+<span id="cb1-17"><a href="#cb1-17"></a>    <span class="co">// check Armstrong number</span></span>
+<span id="cb1-18"><a href="#cb1-18"></a>    flag = checkArmstrongNumber(n);</span>
+<span id="cb1-19"><a href="#cb1-19"></a>    <span class="cf">if</span> (flag == <span class="dv">1</span>)</span>
+<span id="cb1-20"><a href="#cb1-20"></a>        printf(<span class="st">&quot;%d is an Armstrong number.&quot;</span>, n);</span>
+<span id="cb1-21"><a href="#cb1-21"></a>    <span class="cf">else</span></span>
+<span id="cb1-22"><a href="#cb1-22"></a>        printf(<span class="st">&quot;%d is not an Armstrong number.&quot;</span>, n);</span>
+<span id="cb1-23"><a href="#cb1-23"></a>    <span class="cf">return</span> <span class="dv">0</span>;</span>
+<span id="cb1-24"><a href="#cb1-24"></a>}</span>
+<span id="cb1-25"><a href="#cb1-25"></a></span>
+<span id="cb1-26"><a href="#cb1-26"></a><span class="dt">int</span> checkPrimeNumber(<span class="dt">int</span> n) {</span>
+<span id="cb1-27"><a href="#cb1-27"></a>    <span class="dt">int</span> i, flag = <span class="dv">1</span>;</span>
+<span id="cb1-28"><a href="#cb1-28"></a>    <span class="cf">for</span> (i = <span class="dv">2</span>; i &lt;= n / <span class="dv">2</span>; ++i) {</span>
+<span id="cb1-29"><a href="#cb1-29"></a>        <span class="co">// condition for non-prime number</span></span>
+<span id="cb1-30"><a href="#cb1-30"></a>        <span class="cf">if</span> (n % i == <span class="dv">0</span>) {</span>
+<span id="cb1-31"><a href="#cb1-31"></a>            flag = <span class="dv">0</span>;</span>
+<span id="cb1-32"><a href="#cb1-32"></a>            <span class="cf">break</span>;</span>
+<span id="cb1-33"><a href="#cb1-33"></a>        }</span>
+<span id="cb1-34"><a href="#cb1-34"></a>    }</span>
+<span id="cb1-35"><a href="#cb1-35"></a>    <span class="cf">return</span> flag;</span>
+<span id="cb1-36"><a href="#cb1-36"></a>}</span>
+<span id="cb1-37"><a href="#cb1-37"></a></span>
+<span id="cb1-38"><a href="#cb1-38"></a><span class="dt">int</span> checkArmstrongNumber(<span class="dt">int</span> num) {</span>
+<span id="cb1-39"><a href="#cb1-39"></a>    <span class="dt">int</span> original, rem, n = <span class="dv">0</span>, flag;</span>
+<span id="cb1-40"><a href="#cb1-40"></a>    <span class="dt">double</span> result = <span class="fl">0.0</span>;</span>
+<span id="cb1-41"><a href="#cb1-41"></a>    original = num;</span>
+<span id="cb1-42"><a href="#cb1-42"></a>    <span class="cf">while</span> (original != <span class="dv">0</span>) {</span>
+<span id="cb1-43"><a href="#cb1-43"></a>        original /= <span class="dv">10</span>;</span>
+<span id="cb1-44"><a href="#cb1-44"></a>        ++n;</span>
+<span id="cb1-45"><a href="#cb1-45"></a>    }</span>
+<span id="cb1-46"><a href="#cb1-46"></a>    original = num;</span>
+<span id="cb1-47"><a href="#cb1-47"></a>    <span class="cf">while</span> (original != <span class="dv">0</span>) {</span>
+<span id="cb1-48"><a href="#cb1-48"></a>        rem = original % <span class="dv">10</span>;</span>
+<span id="cb1-49"><a href="#cb1-49"></a>        result += pow(rem, n);</span>
+<span id="cb1-50"><a href="#cb1-50"></a>        original /= <span class="dv">10</span>;</span>
+<span id="cb1-51"><a href="#cb1-51"></a>    }</span>
+<span id="cb1-52"><a href="#cb1-52"></a>    <span class="co">// condition for Armstrong number</span></span>
+<span id="cb1-53"><a href="#cb1-53"></a>    <span class="cf">if</span> (round(result) == num)</span>
+<span id="cb1-54"><a href="#cb1-54"></a>        flag = <span class="dv">1</span>;</span>
+<span id="cb1-55"><a href="#cb1-55"></a>    <span class="cf">else</span></span>
+<span id="cb1-56"><a href="#cb1-56"></a>        flag = <span class="dv">0</span>;</span>
+<span id="cb1-57"><a href="#cb1-57"></a>    <span class="cf">return</span> flag;</span>
+<span id="cb1-58"><a href="#cb1-58"></a>}</span></code></pre></div>
+<h3 id="python">Python</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># Python rogram to find the SHA-1 message digest of a file</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="co"># importing the hashlib module</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="im">import</span> hashlib</span>
+<span id="cb2-5"><a href="#cb2-5"></a></span>
+<span id="cb2-6"><a href="#cb2-6"></a><span class="kw">def</span> hash_file(filename):</span>
+<span id="cb2-7"><a href="#cb2-7"></a>   <span class="co">&quot;&quot;&quot;&quot;This function returns the SHA-1 hash</span></span>
+<span id="cb2-8"><a href="#cb2-8"></a><span class="co">   of the file passed into it&quot;&quot;&quot;</span></span>
+<span id="cb2-9"><a href="#cb2-9"></a></span>
+<span id="cb2-10"><a href="#cb2-10"></a>   <span class="co"># make a hash object</span></span>
+<span id="cb2-11"><a href="#cb2-11"></a>   h <span class="op">=</span> hashlib.sha1()</span>
+<span id="cb2-12"><a href="#cb2-12"></a></span>
+<span id="cb2-13"><a href="#cb2-13"></a>   <span class="co"># open file for reading in binary mode</span></span>
+<span id="cb2-14"><a href="#cb2-14"></a>   <span class="cf">with</span> <span class="bu">open</span>(filename,<span class="st">&#39;rb&#39;</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
+<span id="cb2-15"><a href="#cb2-15"></a></span>
+<span id="cb2-16"><a href="#cb2-16"></a>       <span class="co"># loop till the end of the file</span></span>
+<span id="cb2-17"><a href="#cb2-17"></a>       chunk <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb2-18"><a href="#cb2-18"></a>       <span class="cf">while</span> chunk <span class="op">!=</span> b<span class="st">&#39;&#39;</span>:</span>
+<span id="cb2-19"><a href="#cb2-19"></a>           <span class="co"># read only 1024 bytes at a time</span></span>
+<span id="cb2-20"><a href="#cb2-20"></a>           chunk <span class="op">=</span> <span class="bu">file</span>.read(<span class="dv">1024</span>)</span>
+<span id="cb2-21"><a href="#cb2-21"></a>           h.update(chunk)</span>
+<span id="cb2-22"><a href="#cb2-22"></a></span>
+<span id="cb2-23"><a href="#cb2-23"></a>   <span class="co"># return the hex representation of digest</span></span>
+<span id="cb2-24"><a href="#cb2-24"></a>   <span class="cf">return</span> h.hexdigest()</span>
+<span id="cb2-25"><a href="#cb2-25"></a></span>
+<span id="cb2-26"><a href="#cb2-26"></a>message <span class="op">=</span> hash_file(<span class="st">&quot;track1.mp3&quot;</span>)</span>
+<span id="cb2-27"><a href="#cb2-27"></a><span class="bu">print</span>(message)</span></code></pre></div>
+<h3 id="java">Java</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">public</span> <span class="kw">class</span> DecimalOctal {</span>
+<span id="cb3-2"><a href="#cb3-2"></a></span>
+<span id="cb3-3"><a href="#cb3-3"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span>(<span class="bu">String</span>[] args) {</span>
+<span id="cb3-4"><a href="#cb3-4"></a>        <span class="dt">int</span> decimal = <span class="dv">78</span>;</span>
+<span id="cb3-5"><a href="#cb3-5"></a>        <span class="dt">int</span> octal = <span class="fu">convertDecimalToOctal</span>(decimal);</span>
+<span id="cb3-6"><a href="#cb3-6"></a>        <span class="bu">System</span>.<span class="fu">out.printf</span>(<span class="st">&quot;</span><span class="sc">%d</span><span class="st"> in decimal = </span><span class="sc">%d</span><span class="st"> in octal&quot;</span>, decimal, octal);</span>
+<span id="cb3-7"><a href="#cb3-7"></a>    }</span>
+<span id="cb3-8"><a href="#cb3-8"></a></span>
+<span id="cb3-9"><a href="#cb3-9"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">int</span> <span class="fu">convertDecimalToOctal</span>(<span class="dt">int</span> decimal)</span>
+<span id="cb3-10"><a href="#cb3-10"></a>    {</span>
+<span id="cb3-11"><a href="#cb3-11"></a>        <span class="dt">int</span> octalNumber = <span class="dv">0</span>, i = <span class="dv">1</span>;</span>
+<span id="cb3-12"><a href="#cb3-12"></a></span>
+<span id="cb3-13"><a href="#cb3-13"></a>        <span class="kw">while</span> (decimal != <span class="dv">0</span>)</span>
+<span id="cb3-14"><a href="#cb3-14"></a>        {</span>
+<span id="cb3-15"><a href="#cb3-15"></a>            octalNumber += (decimal % <span class="dv">8</span>) * i;</span>
+<span id="cb3-16"><a href="#cb3-16"></a>            decimal /= <span class="dv">8</span>;</span>
+<span id="cb3-17"><a href="#cb3-17"></a>            i *= <span class="dv">10</span>;</span>
+<span id="cb3-18"><a href="#cb3-18"></a>        }</span>
+<span id="cb3-19"><a href="#cb3-19"></a></span>
+<span id="cb3-20"><a href="#cb3-20"></a>        <span class="kw">return</span> octalNumber;</span>
+<span id="cb3-21"><a href="#cb3-21"></a>    }</span>
+<span id="cb3-22"><a href="#cb3-22"></a>}</span></code></pre></div>
+<h3 id="html">HTML</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="kw">&lt;html&gt;</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="kw">&lt;body&gt;</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a></span>
+<span id="cb4-5"><a href="#cb4-5"></a><span class="kw">&lt;p&gt;</span>Click the button to display the date.<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a></span>
+<span id="cb4-7"><a href="#cb4-7"></a><span class="kw">&lt;button</span><span class="ot"> onclick=</span><span class="st">&quot;displayDate()&quot;</span><span class="kw">&gt;</span>The time is?<span class="kw">&lt;/button&gt;</span></span>
+<span id="cb4-8"><a href="#cb4-8"></a></span>
+<span id="cb4-9"><a href="#cb4-9"></a><span class="kw">&lt;script&gt;</span></span>
+<span id="cb4-10"><a href="#cb4-10"></a><span class="kw">function</span> <span class="fu">displayDate</span>() {</span>
+<span id="cb4-11"><a href="#cb4-11"></a>  <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">&quot;demo&quot;</span>)<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="bu">Date</span>()<span class="op">;</span></span>
+<span id="cb4-12"><a href="#cb4-12"></a>}</span>
+<span id="cb4-13"><a href="#cb4-13"></a><span class="kw">&lt;/script&gt;</span></span>
+<span id="cb4-14"><a href="#cb4-14"></a></span>
+<span id="cb4-15"><a href="#cb4-15"></a><span class="kw">&lt;p</span><span class="ot"> id=</span><span class="st">&quot;demo&quot;</span><span class="kw">&gt;&lt;/p&gt;</span></span>
+<span id="cb4-16"><a href="#cb4-16"></a></span>
+<span id="cb4-17"><a href="#cb4-17"></a><span class="kw">&lt;/body&gt;</span></span>
+<span id="cb4-18"><a href="#cb4-18"></a><span class="kw">&lt;/html&gt;</span> </span></code></pre></div>
 <h1 id="introduction">1. Introduction</h1>
 <p>The first chapter is relatively small. There are no programming assignments here. Apart from a select few, most problems are quite straight-forward.</p>
 <h2 id="readings">Readings</h2>
@@ -331,7 +455,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <h2 id="problems">Problems</h2>
 <h3 id="section">1</h3>
-<div class="sourceCode" id="cb2"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb2-1"><a href="#cb2-1"></a>count = lg(n) - <span class="dv">2</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb5-1"><a href="#cb5-1"></a>count = lg(n) - <span class="dv">2</span></span></code></pre></div>
 <h3 id="prove-these">2. Prove These</h3>
 <p>The way to solve these is to find constants, <span class="math inline">\(c\)</span> and <span class="math inline">\(n_0\)</span> such that the conditions of <span class="math inline">\(O\)</span> notation are met.</p>
 <h4 id="a-fracnn-12-is-on2">(a) <span class="math inline">\(\frac{n(n-1)}{2}\)</span> is <span class="math inline">\(O(n^2)\)</span></h4>
@@ -1051,155 +1175,155 @@ gladtex -d myfile-images myfile.htex
 </table>
 <h1 id="default-files">Default files</h1>
 <p>The <code>--defaults</code> option may be used to specify a package of options. Here is a sample defaults file demonstrating all of the fields that may be used:</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">from</span><span class="kw">:</span><span class="at"> markdown+emoji</span></span>
-<span id="cb21-2"><a href="#cb21-2"></a><span class="co"># reader: may be used instead of from:</span></span>
-<span id="cb21-3"><a href="#cb21-3"></a><span class="fu">to</span><span class="kw">:</span><span class="at"> html5</span></span>
-<span id="cb21-4"><a href="#cb21-4"></a><span class="co"># writer: may be used instead of to:</span></span>
-<span id="cb21-5"><a href="#cb21-5"></a></span>
-<span id="cb21-6"><a href="#cb21-6"></a><span class="co"># leave blank for output to stdout:</span></span>
-<span id="cb21-7"><a href="#cb21-7"></a><span class="fu">output-file</span><span class="kw">:</span></span>
-<span id="cb21-8"><a href="#cb21-8"></a><span class="co"># leave blank for input from stdin, use [] for no input:</span></span>
-<span id="cb21-9"><a href="#cb21-9"></a><span class="fu">input-files</span><span class="kw">:</span></span>
-<span id="cb21-10"><a href="#cb21-10"></a><span class="kw">-</span><span class="at"> preface.md</span></span>
-<span id="cb21-11"><a href="#cb21-11"></a><span class="kw">-</span><span class="at"> content.md</span></span>
-<span id="cb21-12"><a href="#cb21-12"></a><span class="co"># or you may use input-file: with a single value</span></span>
-<span id="cb21-13"><a href="#cb21-13"></a></span>
-<span id="cb21-14"><a href="#cb21-14"></a><span class="fu">template</span><span class="kw">:</span><span class="at"> letter</span></span>
-<span id="cb21-15"><a href="#cb21-15"></a><span class="fu">standalone</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb21-16"><a href="#cb21-16"></a><span class="fu">self-contained</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
-<span id="cb21-17"><a href="#cb21-17"></a></span>
-<span id="cb21-18"><a href="#cb21-18"></a><span class="co"># note that structured variables may be specified:</span></span>
-<span id="cb21-19"><a href="#cb21-19"></a><span class="fu">variables</span><span class="kw">:</span></span>
-<span id="cb21-20"><a href="#cb21-20"></a><span class="at">  </span><span class="fu">documentclass</span><span class="kw">:</span><span class="at"> book</span></span>
-<span id="cb21-21"><a href="#cb21-21"></a><span class="at">  </span><span class="fu">classoption</span><span class="kw">:</span></span>
-<span id="cb21-22"><a href="#cb21-22"></a><span class="at">    </span><span class="kw">-</span><span class="at"> twosides</span></span>
-<span id="cb21-23"><a href="#cb21-23"></a><span class="at">    </span><span class="kw">-</span><span class="at"> draft</span></span>
-<span id="cb21-24"><a href="#cb21-24"></a></span>
-<span id="cb21-25"><a href="#cb21-25"></a><span class="co"># metadata values specified here are parsed as literal</span></span>
-<span id="cb21-26"><a href="#cb21-26"></a><span class="co"># string text, not markdown:</span></span>
-<span id="cb21-27"><a href="#cb21-27"></a><span class="fu">metadata</span><span class="kw">:</span></span>
-<span id="cb21-28"><a href="#cb21-28"></a><span class="at">  </span><span class="fu">author</span><span class="kw">:</span></span>
-<span id="cb21-29"><a href="#cb21-29"></a><span class="at">  </span><span class="kw">-</span><span class="at"> Sam Smith</span></span>
-<span id="cb21-30"><a href="#cb21-30"></a><span class="at">  </span><span class="kw">-</span><span class="at"> Julie Liu</span></span>
-<span id="cb21-31"><a href="#cb21-31"></a><span class="fu">metadata-files</span><span class="kw">:</span></span>
-<span id="cb21-32"><a href="#cb21-32"></a><span class="kw">-</span><span class="at"> boilerplate.yaml</span></span>
-<span id="cb21-33"><a href="#cb21-33"></a><span class="co"># or you may use metadata-file: with a single value</span></span>
-<span id="cb21-34"><a href="#cb21-34"></a></span>
-<span id="cb21-35"><a href="#cb21-35"></a><span class="co"># Note that these take files, not their contents:</span></span>
-<span id="cb21-36"><a href="#cb21-36"></a><span class="fu">include-before-body</span><span class="kw">:</span><span class="at"> </span><span class="kw">[]</span></span>
-<span id="cb21-37"><a href="#cb21-37"></a><span class="fu">include-after-body</span><span class="kw">:</span><span class="at"> </span><span class="kw">[]</span></span>
-<span id="cb21-38"><a href="#cb21-38"></a><span class="fu">include-in-header</span><span class="kw">:</span><span class="at"> </span><span class="kw">[]</span></span>
-<span id="cb21-39"><a href="#cb21-39"></a><span class="fu">resource-path</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">&quot;.&quot;</span><span class="kw">]</span></span>
-<span id="cb21-40"><a href="#cb21-40"></a></span>
-<span id="cb21-41"><a href="#cb21-41"></a><span class="co"># filters will be assumed to be Lua filters if they have</span></span>
-<span id="cb21-42"><a href="#cb21-42"></a><span class="co"># the .lua extension, and json filters otherwise.  But</span></span>
-<span id="cb21-43"><a href="#cb21-43"></a><span class="co"># the filter type can also be specified explicitly, as shown:</span></span>
-<span id="cb21-44"><a href="#cb21-44"></a><span class="fu">filters</span><span class="kw">:</span></span>
-<span id="cb21-45"><a href="#cb21-45"></a><span class="kw">-</span><span class="at"> pandoc-citeproc</span></span>
-<span id="cb21-46"><a href="#cb21-46"></a><span class="kw">-</span><span class="at"> wordcount.lua</span></span>
-<span id="cb21-47"><a href="#cb21-47"></a><span class="kw">-</span><span class="at"> </span><span class="fu">type</span><span class="kw">:</span><span class="at"> json</span></span>
-<span id="cb21-48"><a href="#cb21-48"></a><span class="at">  </span><span class="fu">path</span><span class="kw">:</span><span class="at"> foo.lua</span></span>
-<span id="cb21-49"><a href="#cb21-49"></a></span>
-<span id="cb21-50"><a href="#cb21-50"></a><span class="fu">file-scope</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
-<span id="cb21-51"><a href="#cb21-51"></a></span>
-<span id="cb21-52"><a href="#cb21-52"></a><span class="fu">data-dir</span><span class="kw">:</span></span>
-<span id="cb21-53"><a href="#cb21-53"></a></span>
-<span id="cb21-54"><a href="#cb21-54"></a><span class="co"># ERROR, </span><span class="al">WARNING</span><span class="co">, or INFO</span></span>
-<span id="cb21-55"><a href="#cb21-55"></a><span class="fu">verbosity</span><span class="kw">:</span><span class="at"> INFO</span></span>
-<span id="cb21-56"><a href="#cb21-56"></a><span class="fu">log-file</span><span class="kw">:</span><span class="at"> log.json</span></span>
-<span id="cb21-57"><a href="#cb21-57"></a></span>
-<span id="cb21-58"><a href="#cb21-58"></a><span class="co"># citeproc, natbib, or biblatex</span></span>
-<span id="cb21-59"><a href="#cb21-59"></a><span class="fu">cite-method</span><span class="kw">:</span><span class="at"> citeproc</span></span>
-<span id="cb21-60"><a href="#cb21-60"></a><span class="co"># part, chapter, section, or default:</span></span>
-<span id="cb21-61"><a href="#cb21-61"></a><span class="fu">top-level-division</span><span class="kw">:</span><span class="at"> chapter</span></span>
-<span id="cb21-62"><a href="#cb21-62"></a><span class="fu">abbreviations</span><span class="kw">:</span></span>
-<span id="cb21-63"><a href="#cb21-63"></a></span>
-<span id="cb21-64"><a href="#cb21-64"></a><span class="fu">pdf-engine</span><span class="kw">:</span><span class="at"> pdflatex</span></span>
-<span id="cb21-65"><a href="#cb21-65"></a><span class="fu">pdf-engine-opts</span><span class="kw">:</span></span>
-<span id="cb21-66"><a href="#cb21-66"></a><span class="kw">-</span><span class="at"> </span><span class="st">&quot;-shell-escape&quot;</span></span>
-<span id="cb21-67"><a href="#cb21-67"></a><span class="co"># you may also use pdf-engine-opt: with a single option</span></span>
-<span id="cb21-68"><a href="#cb21-68"></a><span class="co"># pdf-engine-opt: &quot;-shell-escape&quot;</span></span>
-<span id="cb21-69"><a href="#cb21-69"></a></span>
-<span id="cb21-70"><a href="#cb21-70"></a><span class="co"># auto, preserve, or none</span></span>
-<span id="cb21-71"><a href="#cb21-71"></a><span class="fu">wrap</span><span class="kw">:</span><span class="at"> auto</span></span>
-<span id="cb21-72"><a href="#cb21-72"></a><span class="fu">columns</span><span class="kw">:</span><span class="at"> </span><span class="dv">78</span></span>
-<span id="cb21-73"><a href="#cb21-73"></a><span class="fu">dpi</span><span class="kw">:</span><span class="at"> </span><span class="dv">72</span></span>
-<span id="cb21-74"><a href="#cb21-74"></a></span>
-<span id="cb21-75"><a href="#cb21-75"></a><span class="fu">extract-media</span><span class="kw">:</span><span class="at"> mediadir</span></span>
-<span id="cb21-76"><a href="#cb21-76"></a></span>
-<span id="cb21-77"><a href="#cb21-77"></a><span class="fu">table-of-contents</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb21-78"><a href="#cb21-78"></a><span class="fu">toc-depth</span><span class="kw">:</span><span class="at"> </span><span class="dv">2</span></span>
-<span id="cb21-79"><a href="#cb21-79"></a><span class="fu">number-sections</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
-<span id="cb21-80"><a href="#cb21-80"></a><span class="co"># a list of offsets at each heading level</span></span>
-<span id="cb21-81"><a href="#cb21-81"></a><span class="fu">number-offset</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="dv">0</span><span class="kw">,</span><span class="dv">0</span><span class="kw">,</span><span class="dv">0</span><span class="kw">,</span><span class="dv">0</span><span class="kw">,</span><span class="dv">0</span><span class="kw">,</span><span class="dv">0</span><span class="kw">]</span></span>
-<span id="cb21-82"><a href="#cb21-82"></a><span class="co"># toc: may also be used instead of table-of-contents:</span></span>
-<span id="cb21-83"><a href="#cb21-83"></a><span class="fu">shift-heading-level-by</span><span class="kw">:</span><span class="at"> </span><span class="dv">1</span></span>
-<span id="cb21-84"><a href="#cb21-84"></a><span class="fu">section-divs</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb21-85"><a href="#cb21-85"></a><span class="fu">identifier-prefix</span><span class="kw">:</span><span class="at"> foo</span></span>
-<span id="cb21-86"><a href="#cb21-86"></a><span class="fu">title-prefix</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;&quot;</span></span>
-<span id="cb21-87"><a href="#cb21-87"></a><span class="fu">strip-empty-paragraphs</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb21-88"><a href="#cb21-88"></a><span class="co"># lf, crlf, or native</span></span>
-<span id="cb21-89"><a href="#cb21-89"></a><span class="fu">eol</span><span class="kw">:</span><span class="at"> lf</span></span>
-<span id="cb21-90"><a href="#cb21-90"></a><span class="fu">strip-comments</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
-<span id="cb21-91"><a href="#cb21-91"></a><span class="fu">indented-code-classes</span><span class="kw">:</span><span class="at"> </span><span class="kw">[]</span></span>
-<span id="cb21-92"><a href="#cb21-92"></a><span class="fu">ascii</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb21-93"><a href="#cb21-93"></a><span class="fu">default-image-extension</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;.jpg&quot;</span></span>
-<span id="cb21-94"><a href="#cb21-94"></a></span>
-<span id="cb21-95"><a href="#cb21-95"></a><span class="co"># either a style name of a style definition file:</span></span>
-<span id="cb21-96"><a href="#cb21-96"></a><span class="fu">highlight-style</span><span class="kw">:</span><span class="at"> pygments</span></span>
-<span id="cb21-97"><a href="#cb21-97"></a><span class="fu">syntax-definitions</span><span class="kw">:</span></span>
-<span id="cb21-98"><a href="#cb21-98"></a><span class="kw">-</span><span class="at"> c.xml</span></span>
-<span id="cb21-99"><a href="#cb21-99"></a><span class="co"># or you may use syntax-definition: with a single value</span></span>
-<span id="cb21-100"><a href="#cb21-100"></a><span class="fu">listings</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
-<span id="cb21-101"><a href="#cb21-101"></a></span>
-<span id="cb21-102"><a href="#cb21-102"></a><span class="fu">reference-doc</span><span class="kw">:</span><span class="at"> myref.docx</span></span>
-<span id="cb21-103"><a href="#cb21-103"></a></span>
-<span id="cb21-104"><a href="#cb21-104"></a><span class="co"># method is plain, webtex, gladtex, mathml, mathjax, katex</span></span>
-<span id="cb21-105"><a href="#cb21-105"></a><span class="co"># you may specify a url with webtex, mathjax, katex</span></span>
-<span id="cb21-106"><a href="#cb21-106"></a><span class="fu">html-math-method</span><span class="kw">:</span></span>
-<span id="cb21-107"><a href="#cb21-107"></a><span class="at">  </span><span class="fu">method</span><span class="kw">:</span><span class="at"> mathjax</span></span>
-<span id="cb21-108"><a href="#cb21-108"></a><span class="at">  </span><span class="fu">url</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&quot;</span></span>
-<span id="cb21-109"><a href="#cb21-109"></a><span class="co"># none, references, or javascript</span></span>
-<span id="cb21-110"><a href="#cb21-110"></a><span class="fu">email-obfuscation</span><span class="kw">:</span><span class="at"> javascript</span></span>
-<span id="cb21-111"><a href="#cb21-111"></a></span>
-<span id="cb21-112"><a href="#cb21-112"></a><span class="fu">tab-stop</span><span class="kw">:</span><span class="at"> </span><span class="dv">8</span></span>
-<span id="cb21-113"><a href="#cb21-113"></a><span class="fu">preserve-tabs</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb21-114"><a href="#cb21-114"></a></span>
-<span id="cb21-115"><a href="#cb21-115"></a><span class="fu">incremental</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
-<span id="cb21-116"><a href="#cb21-116"></a><span class="fu">slide-level</span><span class="kw">:</span><span class="at"> </span><span class="dv">2</span></span>
-<span id="cb21-117"><a href="#cb21-117"></a></span>
-<span id="cb21-118"><a href="#cb21-118"></a><span class="fu">epub-subdirectory</span><span class="kw">:</span><span class="at"> EPUB</span></span>
-<span id="cb21-119"><a href="#cb21-119"></a><span class="fu">epub-metadata</span><span class="kw">:</span><span class="at"> meta.xml</span></span>
-<span id="cb21-120"><a href="#cb21-120"></a><span class="fu">epub-fonts</span><span class="kw">:</span></span>
-<span id="cb21-121"><a href="#cb21-121"></a><span class="kw">-</span><span class="at"> foobar.otf</span></span>
-<span id="cb21-122"><a href="#cb21-122"></a><span class="fu">epub-chapter-level</span><span class="kw">:</span><span class="at"> </span><span class="dv">1</span></span>
-<span id="cb21-123"><a href="#cb21-123"></a><span class="fu">epub-cover-image</span><span class="kw">:</span><span class="at"> cover.jpg</span></span>
-<span id="cb21-124"><a href="#cb21-124"></a></span>
-<span id="cb21-125"><a href="#cb21-125"></a><span class="fu">reference-links</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb21-126"><a href="#cb21-126"></a><span class="co"># block, section, or document</span></span>
-<span id="cb21-127"><a href="#cb21-127"></a><span class="fu">reference-location</span><span class="kw">:</span><span class="at"> block</span></span>
-<span id="cb21-128"><a href="#cb21-128"></a><span class="fu">atx-headers</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
-<span id="cb21-129"><a href="#cb21-129"></a></span>
-<span id="cb21-130"><a href="#cb21-130"></a><span class="co"># accept, reject, or all</span></span>
-<span id="cb21-131"><a href="#cb21-131"></a><span class="fu">track-changes</span><span class="kw">:</span><span class="at"> accept</span></span>
-<span id="cb21-132"><a href="#cb21-132"></a></span>
-<span id="cb21-133"><a href="#cb21-133"></a><span class="fu">html-q-tags</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
-<span id="cb21-134"><a href="#cb21-134"></a><span class="fu">css</span><span class="kw">:</span></span>
-<span id="cb21-135"><a href="#cb21-135"></a><span class="kw">-</span><span class="at"> site.css</span></span>
-<span id="cb21-136"><a href="#cb21-136"></a></span>
-<span id="cb21-137"><a href="#cb21-137"></a><span class="co"># none, all, or best</span></span>
-<span id="cb21-138"><a href="#cb21-138"></a><span class="fu">ipynb-output</span><span class="kw">:</span><span class="at"> best</span></span>
-<span id="cb21-139"><a href="#cb21-139"></a></span>
-<span id="cb21-140"><a href="#cb21-140"></a><span class="co"># A list of two-element lists</span></span>
-<span id="cb21-141"><a href="#cb21-141"></a><span class="fu">request-headers</span><span class="kw">:</span></span>
-<span id="cb21-142"><a href="#cb21-142"></a><span class="kw">-</span><span class="at"> </span><span class="kw">[</span><span class="st">&quot;User-Agent&quot;</span><span class="kw">,</span><span class="at"> </span><span class="st">&quot;Mozilla/5.0&quot;</span><span class="kw">]</span></span>
-<span id="cb21-143"><a href="#cb21-143"></a></span>
-<span id="cb21-144"><a href="#cb21-144"></a><span class="fu">fail-if-warnings</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
-<span id="cb21-145"><a href="#cb21-145"></a><span class="fu">dump-args</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
-<span id="cb21-146"><a href="#cb21-146"></a><span class="fu">ignore-args</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
-<span id="cb21-147"><a href="#cb21-147"></a><span class="fu">trace</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb24-1"><a href="#cb24-1"></a><span class="fu">from</span><span class="kw">:</span><span class="at"> markdown+emoji</span></span>
+<span id="cb24-2"><a href="#cb24-2"></a><span class="co"># reader: may be used instead of from:</span></span>
+<span id="cb24-3"><a href="#cb24-3"></a><span class="fu">to</span><span class="kw">:</span><span class="at"> html5</span></span>
+<span id="cb24-4"><a href="#cb24-4"></a><span class="co"># writer: may be used instead of to:</span></span>
+<span id="cb24-5"><a href="#cb24-5"></a></span>
+<span id="cb24-6"><a href="#cb24-6"></a><span class="co"># leave blank for output to stdout:</span></span>
+<span id="cb24-7"><a href="#cb24-7"></a><span class="fu">output-file</span><span class="kw">:</span></span>
+<span id="cb24-8"><a href="#cb24-8"></a><span class="co"># leave blank for input from stdin, use [] for no input:</span></span>
+<span id="cb24-9"><a href="#cb24-9"></a><span class="fu">input-files</span><span class="kw">:</span></span>
+<span id="cb24-10"><a href="#cb24-10"></a><span class="kw">-</span><span class="at"> preface.md</span></span>
+<span id="cb24-11"><a href="#cb24-11"></a><span class="kw">-</span><span class="at"> content.md</span></span>
+<span id="cb24-12"><a href="#cb24-12"></a><span class="co"># or you may use input-file: with a single value</span></span>
+<span id="cb24-13"><a href="#cb24-13"></a></span>
+<span id="cb24-14"><a href="#cb24-14"></a><span class="fu">template</span><span class="kw">:</span><span class="at"> letter</span></span>
+<span id="cb24-15"><a href="#cb24-15"></a><span class="fu">standalone</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb24-16"><a href="#cb24-16"></a><span class="fu">self-contained</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb24-17"><a href="#cb24-17"></a></span>
+<span id="cb24-18"><a href="#cb24-18"></a><span class="co"># note that structured variables may be specified:</span></span>
+<span id="cb24-19"><a href="#cb24-19"></a><span class="fu">variables</span><span class="kw">:</span></span>
+<span id="cb24-20"><a href="#cb24-20"></a><span class="at">  </span><span class="fu">documentclass</span><span class="kw">:</span><span class="at"> book</span></span>
+<span id="cb24-21"><a href="#cb24-21"></a><span class="at">  </span><span class="fu">classoption</span><span class="kw">:</span></span>
+<span id="cb24-22"><a href="#cb24-22"></a><span class="at">    </span><span class="kw">-</span><span class="at"> twosides</span></span>
+<span id="cb24-23"><a href="#cb24-23"></a><span class="at">    </span><span class="kw">-</span><span class="at"> draft</span></span>
+<span id="cb24-24"><a href="#cb24-24"></a></span>
+<span id="cb24-25"><a href="#cb24-25"></a><span class="co"># metadata values specified here are parsed as literal</span></span>
+<span id="cb24-26"><a href="#cb24-26"></a><span class="co"># string text, not markdown:</span></span>
+<span id="cb24-27"><a href="#cb24-27"></a><span class="fu">metadata</span><span class="kw">:</span></span>
+<span id="cb24-28"><a href="#cb24-28"></a><span class="at">  </span><span class="fu">author</span><span class="kw">:</span></span>
+<span id="cb24-29"><a href="#cb24-29"></a><span class="at">  </span><span class="kw">-</span><span class="at"> Sam Smith</span></span>
+<span id="cb24-30"><a href="#cb24-30"></a><span class="at">  </span><span class="kw">-</span><span class="at"> Julie Liu</span></span>
+<span id="cb24-31"><a href="#cb24-31"></a><span class="fu">metadata-files</span><span class="kw">:</span></span>
+<span id="cb24-32"><a href="#cb24-32"></a><span class="kw">-</span><span class="at"> boilerplate.yaml</span></span>
+<span id="cb24-33"><a href="#cb24-33"></a><span class="co"># or you may use metadata-file: with a single value</span></span>
+<span id="cb24-34"><a href="#cb24-34"></a></span>
+<span id="cb24-35"><a href="#cb24-35"></a><span class="co"># Note that these take files, not their contents:</span></span>
+<span id="cb24-36"><a href="#cb24-36"></a><span class="fu">include-before-body</span><span class="kw">:</span><span class="at"> </span><span class="kw">[]</span></span>
+<span id="cb24-37"><a href="#cb24-37"></a><span class="fu">include-after-body</span><span class="kw">:</span><span class="at"> </span><span class="kw">[]</span></span>
+<span id="cb24-38"><a href="#cb24-38"></a><span class="fu">include-in-header</span><span class="kw">:</span><span class="at"> </span><span class="kw">[]</span></span>
+<span id="cb24-39"><a href="#cb24-39"></a><span class="fu">resource-path</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">&quot;.&quot;</span><span class="kw">]</span></span>
+<span id="cb24-40"><a href="#cb24-40"></a></span>
+<span id="cb24-41"><a href="#cb24-41"></a><span class="co"># filters will be assumed to be Lua filters if they have</span></span>
+<span id="cb24-42"><a href="#cb24-42"></a><span class="co"># the .lua extension, and json filters otherwise.  But</span></span>
+<span id="cb24-43"><a href="#cb24-43"></a><span class="co"># the filter type can also be specified explicitly, as shown:</span></span>
+<span id="cb24-44"><a href="#cb24-44"></a><span class="fu">filters</span><span class="kw">:</span></span>
+<span id="cb24-45"><a href="#cb24-45"></a><span class="kw">-</span><span class="at"> pandoc-citeproc</span></span>
+<span id="cb24-46"><a href="#cb24-46"></a><span class="kw">-</span><span class="at"> wordcount.lua</span></span>
+<span id="cb24-47"><a href="#cb24-47"></a><span class="kw">-</span><span class="at"> </span><span class="fu">type</span><span class="kw">:</span><span class="at"> json</span></span>
+<span id="cb24-48"><a href="#cb24-48"></a><span class="at">  </span><span class="fu">path</span><span class="kw">:</span><span class="at"> foo.lua</span></span>
+<span id="cb24-49"><a href="#cb24-49"></a></span>
+<span id="cb24-50"><a href="#cb24-50"></a><span class="fu">file-scope</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb24-51"><a href="#cb24-51"></a></span>
+<span id="cb24-52"><a href="#cb24-52"></a><span class="fu">data-dir</span><span class="kw">:</span></span>
+<span id="cb24-53"><a href="#cb24-53"></a></span>
+<span id="cb24-54"><a href="#cb24-54"></a><span class="co"># ERROR, </span><span class="al">WARNING</span><span class="co">, or INFO</span></span>
+<span id="cb24-55"><a href="#cb24-55"></a><span class="fu">verbosity</span><span class="kw">:</span><span class="at"> INFO</span></span>
+<span id="cb24-56"><a href="#cb24-56"></a><span class="fu">log-file</span><span class="kw">:</span><span class="at"> log.json</span></span>
+<span id="cb24-57"><a href="#cb24-57"></a></span>
+<span id="cb24-58"><a href="#cb24-58"></a><span class="co"># citeproc, natbib, or biblatex</span></span>
+<span id="cb24-59"><a href="#cb24-59"></a><span class="fu">cite-method</span><span class="kw">:</span><span class="at"> citeproc</span></span>
+<span id="cb24-60"><a href="#cb24-60"></a><span class="co"># part, chapter, section, or default:</span></span>
+<span id="cb24-61"><a href="#cb24-61"></a><span class="fu">top-level-division</span><span class="kw">:</span><span class="at"> chapter</span></span>
+<span id="cb24-62"><a href="#cb24-62"></a><span class="fu">abbreviations</span><span class="kw">:</span></span>
+<span id="cb24-63"><a href="#cb24-63"></a></span>
+<span id="cb24-64"><a href="#cb24-64"></a><span class="fu">pdf-engine</span><span class="kw">:</span><span class="at"> pdflatex</span></span>
+<span id="cb24-65"><a href="#cb24-65"></a><span class="fu">pdf-engine-opts</span><span class="kw">:</span></span>
+<span id="cb24-66"><a href="#cb24-66"></a><span class="kw">-</span><span class="at"> </span><span class="st">&quot;-shell-escape&quot;</span></span>
+<span id="cb24-67"><a href="#cb24-67"></a><span class="co"># you may also use pdf-engine-opt: with a single option</span></span>
+<span id="cb24-68"><a href="#cb24-68"></a><span class="co"># pdf-engine-opt: &quot;-shell-escape&quot;</span></span>
+<span id="cb24-69"><a href="#cb24-69"></a></span>
+<span id="cb24-70"><a href="#cb24-70"></a><span class="co"># auto, preserve, or none</span></span>
+<span id="cb24-71"><a href="#cb24-71"></a><span class="fu">wrap</span><span class="kw">:</span><span class="at"> auto</span></span>
+<span id="cb24-72"><a href="#cb24-72"></a><span class="fu">columns</span><span class="kw">:</span><span class="at"> </span><span class="dv">78</span></span>
+<span id="cb24-73"><a href="#cb24-73"></a><span class="fu">dpi</span><span class="kw">:</span><span class="at"> </span><span class="dv">72</span></span>
+<span id="cb24-74"><a href="#cb24-74"></a></span>
+<span id="cb24-75"><a href="#cb24-75"></a><span class="fu">extract-media</span><span class="kw">:</span><span class="at"> mediadir</span></span>
+<span id="cb24-76"><a href="#cb24-76"></a></span>
+<span id="cb24-77"><a href="#cb24-77"></a><span class="fu">table-of-contents</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb24-78"><a href="#cb24-78"></a><span class="fu">toc-depth</span><span class="kw">:</span><span class="at"> </span><span class="dv">2</span></span>
+<span id="cb24-79"><a href="#cb24-79"></a><span class="fu">number-sections</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb24-80"><a href="#cb24-80"></a><span class="co"># a list of offsets at each heading level</span></span>
+<span id="cb24-81"><a href="#cb24-81"></a><span class="fu">number-offset</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="dv">0</span><span class="kw">,</span><span class="dv">0</span><span class="kw">,</span><span class="dv">0</span><span class="kw">,</span><span class="dv">0</span><span class="kw">,</span><span class="dv">0</span><span class="kw">,</span><span class="dv">0</span><span class="kw">]</span></span>
+<span id="cb24-82"><a href="#cb24-82"></a><span class="co"># toc: may also be used instead of table-of-contents:</span></span>
+<span id="cb24-83"><a href="#cb24-83"></a><span class="fu">shift-heading-level-by</span><span class="kw">:</span><span class="at"> </span><span class="dv">1</span></span>
+<span id="cb24-84"><a href="#cb24-84"></a><span class="fu">section-divs</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb24-85"><a href="#cb24-85"></a><span class="fu">identifier-prefix</span><span class="kw">:</span><span class="at"> foo</span></span>
+<span id="cb24-86"><a href="#cb24-86"></a><span class="fu">title-prefix</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;&quot;</span></span>
+<span id="cb24-87"><a href="#cb24-87"></a><span class="fu">strip-empty-paragraphs</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb24-88"><a href="#cb24-88"></a><span class="co"># lf, crlf, or native</span></span>
+<span id="cb24-89"><a href="#cb24-89"></a><span class="fu">eol</span><span class="kw">:</span><span class="at"> lf</span></span>
+<span id="cb24-90"><a href="#cb24-90"></a><span class="fu">strip-comments</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb24-91"><a href="#cb24-91"></a><span class="fu">indented-code-classes</span><span class="kw">:</span><span class="at"> </span><span class="kw">[]</span></span>
+<span id="cb24-92"><a href="#cb24-92"></a><span class="fu">ascii</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb24-93"><a href="#cb24-93"></a><span class="fu">default-image-extension</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;.jpg&quot;</span></span>
+<span id="cb24-94"><a href="#cb24-94"></a></span>
+<span id="cb24-95"><a href="#cb24-95"></a><span class="co"># either a style name of a style definition file:</span></span>
+<span id="cb24-96"><a href="#cb24-96"></a><span class="fu">highlight-style</span><span class="kw">:</span><span class="at"> pygments</span></span>
+<span id="cb24-97"><a href="#cb24-97"></a><span class="fu">syntax-definitions</span><span class="kw">:</span></span>
+<span id="cb24-98"><a href="#cb24-98"></a><span class="kw">-</span><span class="at"> c.xml</span></span>
+<span id="cb24-99"><a href="#cb24-99"></a><span class="co"># or you may use syntax-definition: with a single value</span></span>
+<span id="cb24-100"><a href="#cb24-100"></a><span class="fu">listings</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb24-101"><a href="#cb24-101"></a></span>
+<span id="cb24-102"><a href="#cb24-102"></a><span class="fu">reference-doc</span><span class="kw">:</span><span class="at"> myref.docx</span></span>
+<span id="cb24-103"><a href="#cb24-103"></a></span>
+<span id="cb24-104"><a href="#cb24-104"></a><span class="co"># method is plain, webtex, gladtex, mathml, mathjax, katex</span></span>
+<span id="cb24-105"><a href="#cb24-105"></a><span class="co"># you may specify a url with webtex, mathjax, katex</span></span>
+<span id="cb24-106"><a href="#cb24-106"></a><span class="fu">html-math-method</span><span class="kw">:</span></span>
+<span id="cb24-107"><a href="#cb24-107"></a><span class="at">  </span><span class="fu">method</span><span class="kw">:</span><span class="at"> mathjax</span></span>
+<span id="cb24-108"><a href="#cb24-108"></a><span class="at">  </span><span class="fu">url</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&quot;</span></span>
+<span id="cb24-109"><a href="#cb24-109"></a><span class="co"># none, references, or javascript</span></span>
+<span id="cb24-110"><a href="#cb24-110"></a><span class="fu">email-obfuscation</span><span class="kw">:</span><span class="at"> javascript</span></span>
+<span id="cb24-111"><a href="#cb24-111"></a></span>
+<span id="cb24-112"><a href="#cb24-112"></a><span class="fu">tab-stop</span><span class="kw">:</span><span class="at"> </span><span class="dv">8</span></span>
+<span id="cb24-113"><a href="#cb24-113"></a><span class="fu">preserve-tabs</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb24-114"><a href="#cb24-114"></a></span>
+<span id="cb24-115"><a href="#cb24-115"></a><span class="fu">incremental</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb24-116"><a href="#cb24-116"></a><span class="fu">slide-level</span><span class="kw">:</span><span class="at"> </span><span class="dv">2</span></span>
+<span id="cb24-117"><a href="#cb24-117"></a></span>
+<span id="cb24-118"><a href="#cb24-118"></a><span class="fu">epub-subdirectory</span><span class="kw">:</span><span class="at"> EPUB</span></span>
+<span id="cb24-119"><a href="#cb24-119"></a><span class="fu">epub-metadata</span><span class="kw">:</span><span class="at"> meta.xml</span></span>
+<span id="cb24-120"><a href="#cb24-120"></a><span class="fu">epub-fonts</span><span class="kw">:</span></span>
+<span id="cb24-121"><a href="#cb24-121"></a><span class="kw">-</span><span class="at"> foobar.otf</span></span>
+<span id="cb24-122"><a href="#cb24-122"></a><span class="fu">epub-chapter-level</span><span class="kw">:</span><span class="at"> </span><span class="dv">1</span></span>
+<span id="cb24-123"><a href="#cb24-123"></a><span class="fu">epub-cover-image</span><span class="kw">:</span><span class="at"> cover.jpg</span></span>
+<span id="cb24-124"><a href="#cb24-124"></a></span>
+<span id="cb24-125"><a href="#cb24-125"></a><span class="fu">reference-links</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb24-126"><a href="#cb24-126"></a><span class="co"># block, section, or document</span></span>
+<span id="cb24-127"><a href="#cb24-127"></a><span class="fu">reference-location</span><span class="kw">:</span><span class="at"> block</span></span>
+<span id="cb24-128"><a href="#cb24-128"></a><span class="fu">atx-headers</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb24-129"><a href="#cb24-129"></a></span>
+<span id="cb24-130"><a href="#cb24-130"></a><span class="co"># accept, reject, or all</span></span>
+<span id="cb24-131"><a href="#cb24-131"></a><span class="fu">track-changes</span><span class="kw">:</span><span class="at"> accept</span></span>
+<span id="cb24-132"><a href="#cb24-132"></a></span>
+<span id="cb24-133"><a href="#cb24-133"></a><span class="fu">html-q-tags</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb24-134"><a href="#cb24-134"></a><span class="fu">css</span><span class="kw">:</span></span>
+<span id="cb24-135"><a href="#cb24-135"></a><span class="kw">-</span><span class="at"> site.css</span></span>
+<span id="cb24-136"><a href="#cb24-136"></a></span>
+<span id="cb24-137"><a href="#cb24-137"></a><span class="co"># none, all, or best</span></span>
+<span id="cb24-138"><a href="#cb24-138"></a><span class="fu">ipynb-output</span><span class="kw">:</span><span class="at"> best</span></span>
+<span id="cb24-139"><a href="#cb24-139"></a></span>
+<span id="cb24-140"><a href="#cb24-140"></a><span class="co"># A list of two-element lists</span></span>
+<span id="cb24-141"><a href="#cb24-141"></a><span class="fu">request-headers</span><span class="kw">:</span></span>
+<span id="cb24-142"><a href="#cb24-142"></a><span class="kw">-</span><span class="at"> </span><span class="kw">[</span><span class="st">&quot;User-Agent&quot;</span><span class="kw">,</span><span class="at"> </span><span class="st">&quot;Mozilla/5.0&quot;</span><span class="kw">]</span></span>
+<span id="cb24-143"><a href="#cb24-143"></a></span>
+<span id="cb24-144"><a href="#cb24-144"></a><span class="fu">fail-if-warnings</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb24-145"><a href="#cb24-145"></a><span class="fu">dump-args</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb24-146"><a href="#cb24-146"></a><span class="fu">ignore-args</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb24-147"><a href="#cb24-147"></a><span class="fu">trace</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span></code></pre></div>
 <p>Fields that are omitted will just have their regular default values. So a defaults file can be as simple as one line:</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb22-1"><a href="#cb22-1"></a><span class="fu">verbosity</span><span class="kw">:</span><span class="at"> INFO</span></span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb25-1"><a href="#cb25-1"></a><span class="fu">verbosity</span><span class="kw">:</span><span class="at"> INFO</span></span></code></pre></div>
 <p>Default files can be placed in the <code>defaults</code> subdirectory of the user data directory and used from any directory. For example, one could create a file specifying defaults for writing letters, save it as <code>letter.yaml</code> in the <code>defaults</code> subdirectory of the user data directory, and then invoke these defaults from any directory using <code>pandoc --defaults letter</code> or <code>pandoc -dletter</code>.</p>
 <p>When multiple defaults are used, their contents will be combined.</p>
 <p>Note that, where command-line arguments may be repeated (<code>--metadata-file</code>, <code>--css</code>, <code>--include-in-header</code>, <code>--include-before-body</code>, <code>--include-after-body</code>, <code>--variable</code>, <code>--metadata</code>, <code>--syntax-definition</code>), the values specified on the command line will combine with values specified in the defaults file, rather than replacing them.</p>
