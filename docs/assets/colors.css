@@ -1,12 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 .theme-light-1 {
     --color-bg: white;
     --color-text: rgb(34, 34, 34);
     --sidebar-border: 1px solid #eaecef;
     --sidebar-background: inherit;
     --color-check-button: #aaa;
-    --font-main: 'Inter';
-    --font-code: 'Roboto Mono';
+    --font-main: 'IBM Plex Sans';
+    --font-code: 'IBM Plex Mono';
 }
 
 .theme-dark-1 {
