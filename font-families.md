@@ -32,6 +32,7 @@
     - Fira Code
 
 6 - Inter
+    The problem is that you'll have to manually reduce letter spacing. Default tracking is very wide.
 
 7 - Public Sans
 

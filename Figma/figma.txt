@@ -1,0 +1,338 @@
+/* NASA instrumentation */
+
+position: relative;
+width: 974px;
+height: 537px;
+
+background: #FFFFFF;
+
+
+/* Group */
+
+position: absolute;
+width: 356px;
+height: 63px;
+left: 60px;
+top: 70px;
+
+
+
+/* Rectangle */
+
+position: absolute;
+width: 356px;
+height: 63px;
+left: 60px;
+top: 70px;
+
+background: #E93C3C;
+
+
+/* STAB TRIM FAILURE */
+
+position: absolute;
+width: 356px;
+height: 63px;
+left: 60px;
+top: 70px;
+
+font-family: Inter;
+font-style: normal;
+font-weight: bold;
+font-size: 34px;
+line-height: 41px;
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: -0.01em;
+
+color: #FFFFFF;
+
+
+
+/* Group */
+
+position: absolute;
+width: 410px;
+height: 63px;
+left: 60px;
+top: 153px;
+
+
+
+/* Rectangle */
+
+position: absolute;
+width: 410px;
+height: 63px;
+left: 60px;
+top: 153px;
+
+background: #FFC652;
+
+
+/* BRAKE PRESSURE LOW */
+
+position: absolute;
+width: 410px;
+height: 63px;
+left: 60px;
+top: 153px;
+
+font-family: Inter;
+font-style: normal;
+font-weight: bold;
+font-size: 34px;
+line-height: 41px;
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: -0.01em;
+
+color: #000000;
+
+
+
+/* Group */
+
+position: absolute;
+width: 355px;
+height: 63px;
+left: 60px;
+top: 319px;
+
+
+
+/* Rectangle */
+
+position: absolute;
+width: 355px;
+height: 63px;
+left: 60px;
+top: 319px;
+
+background: #2B79E3;
+
+
+/* AUX FLOOD LIGHTS */
+
+position: absolute;
+width: 355px;
+height: 63px;
+left: 60px;
+top: 319px;
+
+font-family: Inter;
+font-style: normal;
+font-weight: bold;
+font-size: 34px;
+line-height: 41px;
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: -0.01em;
+
+color: #FFFFFF;
+
+
+
+/* Group */
+
+position: absolute;
+width: 291px;
+height: 63px;
+left: 60px;
+top: 236px;
+
+
+
+/* Rectangle */
+
+position: absolute;
+width: 291px;
+height: 63px;
+left: 60px;
+top: 236px;
+
+background: #8B4FC3;
+
+
+/* CARGO DOOR 3 */
+
+position: absolute;
+width: 291px;
+height: 63px;
+left: 60px;
+top: 236px;
+
+font-family: Inter;
+font-style: normal;
+font-weight: bold;
+font-size: 34px;
+line-height: 41px;
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: -0.01em;
+
+color: #FFFFFF;
+
+
+
+/* Group */
+
+position: absolute;
+width: 156px;
+height: 63px;
+left: 60px;
+top: 402px;
+
+
+
+/* Rectangle */
+
+position: absolute;
+width: 156px;
+height: 63px;
+left: 60px;
+top: 402px;
+
+background: #0BA464;
+
+
+/* READY */
+
+position: absolute;
+width: 156px;
+height: 63px;
+left: 60px;
+top: 402px;
+
+font-family: Inter;
+font-style: normal;
+font-weight: bold;
+font-size: 34px;
+line-height: 41px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #FFFFFF;
+
+
+
+/* Frame */
+
+position: absolute;
+left: 530px;
+right: 0px;
+top: 0px;
+bottom: 0px;
+
+background: #111111;
+
+
+/* Stab trim failure */
+
+position: absolute;
+width: 338px;
+height: 63px;
+left: 76px;
+top: 70px;
+
+font-family: Inter;
+font-style: normal;
+font-weight: 500;
+font-size: 34px;
+line-height: 41px;
+display: flex;
+align-items: center;
+letter-spacing: -0.01em;
+
+color: #FA5D48;
+
+
+
+/* Brake pressure low */
+
+position: absolute;
+width: 311px;
+height: 63px;
+left: 76px;
+top: 153px;
+
+font-family: Inter;
+font-style: normal;
+font-weight: 500;
+font-size: 34px;
+line-height: 41px;
+display: flex;
+align-items: center;
+letter-spacing: -0.01em;
+
+color: #FDC95F;
+
+
+
+/* Cargo door 3 */
+
+position: absolute;
+width: 311px;
+height: 63px;
+left: 76px;
+top: 236px;
+
+font-family: Inter;
+font-style: normal;
+font-weight: 500;
+font-size: 34px;
+line-height: 41px;
+display: flex;
+align-items: center;
+letter-spacing: -0.01em;
+
+color: #C896F7;
+
+
+
+/* Aux flood lights */
+
+position: absolute;
+width: 261px;
+height: 63px;
+left: 76px;
+top: 319px;
+
+font-family: Inter;
+font-style: normal;
+font-weight: 500;
+font-size: 34px;
+line-height: 41px;
+display: flex;
+align-items: center;
+letter-spacing: -0.01em;
+
+color: #76B6F6;
+
+
+
+/* Ready */
+
+position: absolute;
+width: 136px;
+height: 63px;
+left: 76px;
+top: 402px;
+
+font-family: Inter;
+font-style: normal;
+font-weight: 500;
+font-size: 34px;
+line-height: 41px;
+display: flex;
+align-items: center;
+letter-spacing: -0.01em;
+
+color: #23D98D;
+
+
