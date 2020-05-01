@@ -3,3 +3,5 @@ Problems to be solved:
 2 - Adding dynamic dark mode
 3 - Page loading overlay
 4 - Auto collapse the sidebar on clicking on a TOC item
+5 - Body scrolling underneth when scrolling on fixed sidebar: fix this with overscroll-behavior: contain ;
+

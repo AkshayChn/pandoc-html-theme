@@ -16,6 +16,7 @@ body {
 }
 .sidebar {
   position: fixed;
+  overscroll-behavior: contain;
   left: -350px;
   width: 350px;
   height: 100%;
