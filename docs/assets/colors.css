@@ -4,6 +4,8 @@
     --sidebar-border: 1px solid #eaecef;
     --sidebar-background: inherit;
     --color-check-button: #aaa;
+    --font-main: 'IBM Plex Sans';
+    --font-code: 'IBM Plex Mono';
 }
 
 .theme-dark-1 {
@@ -12,4 +14,6 @@
     --sidebar-border: none;
     --sidebar-background: #222;
     --color-check-button: #333;
+    --font-main: 'IBM Plex Sans';
+    --font-code: 'IBM Plex Mono';
 }

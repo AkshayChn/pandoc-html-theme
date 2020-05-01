@@ -8,7 +8,7 @@
   text-decoration: none;
 }
 body {
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: var(--font-main, sans-serif);
   font-size: 18px;
   line-height: 1.5;
   background-color: var(--color-bg, white);
