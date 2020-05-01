@@ -88,14 +88,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
  
 
 <!-- CSS files -->
+<link rel="stylesheet" href="./assets/overlay.css">
+<link rel="stylesheet" href="./assets/colors.css">
 <link rel="stylesheet" href="./assets/sidebar.css">
 <link rel="stylesheet" href="./assets/screensize.css">
 <link rel="stylesheet" href="./assets/spacing_and_styling.css">
-<link rel="stylesheet" href="./assets/colors.css">
+
 </head>
   
 <!-- BODY BEGINS HERE-->
 <body class="theme-light-1">
+<!-- OVERLAY BEFORE PAGE LOADS-->
+<div id="overlay">
+<div class="loader"></div>
+</div>
+
 <!-- SIDEBAR BUTTON -->
 <input type="checkbox" id="check">
 <label for="check">
@@ -3590,5 +3597,6 @@ foo
 </div>
 </main>
 
+<script src="./assets/scripts.js"></script> 
 </body>
 </html>

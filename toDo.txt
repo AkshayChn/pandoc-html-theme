@@ -2,7 +2,7 @@ Problems to be solved:
 1 - The page layout getting reset when hrefd. Hold page position on page resize.
 2 - Adding dynamic dark mode- done partially
 2.5- Correct the colors for dark mode
-3 - Page loading overlay
+3[X] - Page loading overlay; Done for now: may need a dark theme version
 4 - Auto collapse the sidebar on clicking on a TOC item
 5[X] - Body scrolling underneth when scrolling on fixed sidebar: fix this with `overscroll-behavior: contain` solved fully
 
