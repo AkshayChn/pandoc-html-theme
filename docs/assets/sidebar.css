@@ -9,11 +9,10 @@
 }
 body {
   font-family: var(--font-main, sans-serif);
-  font-size: 17px;
+  font-size: 18px;
   line-height: 1.5;
   background-color: var(--color-bg, white);
   color: var(--color-text, black);
-  letter-spacing: -0.013em;
 }
 .sidebar {
   position: fixed;

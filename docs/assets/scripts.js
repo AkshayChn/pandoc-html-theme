@@ -19,3 +19,8 @@ checkbox.addEventListener( 'change', function() {
         
     }
 });
+
+/*Collapse the sidebar on clicking the body*/
+function bodyClick() {
+  document.getElementById("check").checked = false;
+}
