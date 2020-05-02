@@ -23,6 +23,7 @@ CSS_ARGS = --css=$(CSS_FILE)
 TEMPLATE_PATH = $(ASSETS)template.html
 TEMPLATE = --template $(TEMPLATE_PATH)
 PANDOC_COMMAND = pandoc
+HIGHLIGHT_STYLE = --highlight=tango
 
 # Colors
 RED= \033[0;31m
@@ -33,7 +34,7 @@ YELLOW= \033[1;33m
 
 # Combined arguments
 
-ARGS = -f markdown+emoji $(TEMPLATE) $(TOC) $(MATH_FORMULAS) $(CSS_ARGS) $(METADATA_ARGS)
+ARGS = -f markdown+emoji $(TEMPLATE) $(TOC) $(MATH_FORMULAS) $(CSS_ARGS) $(METADATA_ARGS) $(HIGHLIGHT_STYLE)
 HTML_ARGS = --standalone --to=html5
 
 

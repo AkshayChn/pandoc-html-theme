@@ -11,7 +11,7 @@ pre {
   tab-size: 4;
   overflow: auto;
   /*border: 1px solid #dddddd;*/
-  /*border-radius: 3px;*/
+  border-radius: 3px;
   white-space: pre-wrap;
 }
 pre > code{
@@ -27,7 +27,7 @@ pre > code{
   white-space: normal;
   padding: 0 4px;
   /*border: 1px solid #dddddd;*/
-  /*border-radius: 3px;*/
+  border-radius: 3px;
   background: var(--color-code-bg, #f0f0f0);
 }
 

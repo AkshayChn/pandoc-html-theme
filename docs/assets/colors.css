@@ -13,7 +13,7 @@
     /*CODE*/
     --color-code-bg: #f0f0f0;
     --color-code-text: #8c4a03;
-    
+    /*Custom Divs*/
     --color-note-text: DodgerBlue;
     --color-good-text: green;
     --color-bad-text: red;
@@ -29,12 +29,12 @@
     --font-code: 'IBM Plex Mono';
     
     /*PRE*/
-    --color-pre-bg: #f0f0f0;
-    --color-pre-text: #222222;
+    --color-pre-bg: #333;
+    --color-pre-text: #ddd;
     /*CODE*/
-    --color-code-bg: #f0f0f0;
-    --color-code-text: #8c4a03;
-    
+    --color-code-bg: #333;
+    --color-code-text: #FDC95F;
+    /*Custom Divs*/
     --color-note-text: #76B6F6;
     --color-good-text: #23D98D;
     --color-bad-text: #FA5D48;
