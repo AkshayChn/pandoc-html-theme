@@ -30,6 +30,9 @@ pre > code{
   border-radius: 3px;
   background: var(--color-code-bg, #f0f0f0);
 }
+div.sourceCode {
+    background: none;
+}
 
 /*HEADINGS*/
 h1 {
