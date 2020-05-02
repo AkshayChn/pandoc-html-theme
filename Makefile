@@ -23,7 +23,7 @@ CSS_ARGS = --css=$(CSS_FILE)
 TEMPLATE_PATH = $(ASSETS)template.html
 TEMPLATE = --template $(TEMPLATE_PATH)
 PANDOC_COMMAND = pandoc
-HIGHLIGHT_STYLE = --highlight=tango
+HIGHLIGHT_STYLE = --highlight=zenburn
 
 # Colors
 RED= \033[0;31m

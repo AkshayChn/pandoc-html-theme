@@ -29,10 +29,10 @@
     --font-code: 'IBM Plex Mono';
     
     /*PRE*/
-    --color-pre-bg: #333;
+    --color-pre-bg: #222;
     --color-pre-text: #ddd;
     /*CODE*/
-    --color-code-bg: #333;
+    --color-code-bg: #222;
     --color-code-text: #FDC95F;
     /*Custom Divs*/
     --color-note-text: #76B6F6;
