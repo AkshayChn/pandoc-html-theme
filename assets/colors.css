@@ -27,4 +27,15 @@
     --color-check-button: #333;
     --font-main: 'IBM Plex Sans';
     --font-code: 'IBM Plex Mono';
+    
+    /*PRE*/
+    --color-pre-bg: #f0f0f0;
+    --color-pre-text: #222222;
+    /*CODE*/
+    --color-code-bg: #f0f0f0;
+    --color-code-text: #8c4a03;
+    
+    --color-note-text: #76B6F6;
+    --color-good-text: #23D98D;
+    --color-bad-text: #FA5D48;
 }

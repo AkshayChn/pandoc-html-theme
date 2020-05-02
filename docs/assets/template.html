@@ -50,7 +50,7 @@ $endfor$
 </head>
   
 <!-- BODY BEGINS HERE-->
-<body class="theme-light-1">
+<body class="theme-light-1" id="bodyId">
 <!-- OVERLAY BEFORE PAGE LOADS-->
 <div id="overlay">
 <div class="loader"></div>
@@ -75,6 +75,12 @@ $endfor$
 $if(date)$
 <h5>$date$</p></h5>
 $endif$
+<!-- Dark Theme Selector Checkbox -->
+<input type="checkbox" id="themeToggle" name="themeToggleCheckbox">
+<label for="themeToggle">
+<span id="themeToggleButton">Dark Mode</span>
+</label>
+
 </header>
 
 <div id="sidebarTOC">
