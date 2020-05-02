@@ -6,6 +6,6 @@ Problems to be solved:
 4 - Auto collapse the sidebar on clicking on a TOC item
 5[X] - Body scrolling underneth when scrolling on fixed sidebar: fix this with `overscroll-behavior: contain` solved fully
 
-6 - Add zenburn dark mode, and for light mode
+6 - Add zenburn dark mode, use JS to disable, enable style sheet
 7 - Change overlay visibility to display none property use !important tag
 8 - Change from checkbox to button for dark mode
