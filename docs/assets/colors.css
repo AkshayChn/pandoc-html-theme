@@ -6,6 +6,12 @@
     --color-check-button: #aaa;
     --font-main: 'IBM Plex Sans';
     --font-code: 'IBM Plex Mono';
+    
+    --color-pre-bg: #f0f0f0;
+    --color-pre-text: #222222;
+    
+    --color-code-bg: #f0f0f0;
+    --color-code-text: #8c4a03;
 }
 
 .theme-dark-1 {

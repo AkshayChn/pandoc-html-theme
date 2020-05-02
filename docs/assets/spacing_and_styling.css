@@ -4,14 +4,14 @@
 
 pre {
   padding: 10px;
-  background: #f0f0f0;
+  background: var(--color-pre-bg, #f0f0f0);
   font-family: var(--font-code, monospace);
-  color: #222222;
+  color: var(--color-pre-text, #222222);
   -moz-tab-size: 4;
   tab-size: 4;
   overflow: auto;
   /*border: 1px solid #dddddd;*/
-  border-radius: 3px;
+  /*border-radius: 3px;*/
   white-space: pre-wrap;
 }
 pre > code{
@@ -23,12 +23,12 @@ pre > code{
 :not(pre) > samp {
   /*font-size: 14px;*/
   font-family: var(--font-code, monospace);
-  color: #8c4a03;
+  color: var(--color-code-text, #8c4a03);
   white-space: normal;
   padding: 0 4px;
   /*border: 1px solid #dddddd;*/
-  border-radius: 3px;
-  background: #f0f0f0;
+  /*border-radius: 3px;*/
+  background: var(--color-code-bg, #f0f0f0);
 }
 
 /*HEADINGS*/
