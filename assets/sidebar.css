@@ -52,6 +52,18 @@ body {
 }
 
 
+#themeToggle {
+    display: none;
+}
+
+#themeToggleButton {
+    font-weight: bold;
+    background: rgba(200, 200, 200, 0.4);
+    border-radius: 4px;
+    padding: 0px 7px;
+    cursor: pointer;
+}
+
 
 #check{
   display: none;
