@@ -14,14 +14,14 @@
     --color-code-bg: #f0f0f0;
     --color-code-text: #8c4a03;
     /*Custom Divs*/
-    --color-note-text: DodgerBlue;
-    --color-good-text: green;
-    --color-bad-text: red;
+    --color-note-text: #2B79E3;
+    --color-good-text: #0BA464;
+    --color-bad-text: #E93C3C;
 }
 
 .theme-dark-1 {
     --color-bg: #121212;
-    --color-text: #ddd;
+    --color-text: #eee;
     --sidebar-border: none;
     --sidebar-background: #222;
     --color-check-button: #333;
