@@ -55,7 +55,7 @@ h4 {
     font-weight: normal;
 }
 
-p, ul, ol, table, pre {
+p, ul, ol, dl, table, pre {
     margin-bottom: 1em;
 }
 
